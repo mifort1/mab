@@ -16,19 +16,6 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            [
-                'class' => 'yii\log\FileTarget',
-                'levels' => ['error'],
-                'logFile' => '@app/runtime/logs/web-error.log'
-            ],
-            [
-                'class' => 'yii\log\FileTarget',
-                'levels' => ['warning'],
-                'logFile' => '@app/runtime/logs/web-warning.log'
-            ],
-        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
