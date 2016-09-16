@@ -14,5 +14,16 @@ return [
                 '<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_c>/<_a>',
             ],
         ],
+        'log' => [
+            'targets' => [
+                'file' => [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['trace', 'info', 'error', 'warning'],
+                    'categories' => ['yii\*'],
+                ],
+
+            ],
+        ],
+
     ],
 ];

@@ -19,6 +19,13 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'view' => [
+            'theme' => [
+                'pathMap' => ['@frontend/views' => '@webroot/themes/rightChoice/views'],
+                'basePath' => '@webroot/themes/rightChoice',
+                'baseUrl' => '@web/themes/rightChoice',
+            ],
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,

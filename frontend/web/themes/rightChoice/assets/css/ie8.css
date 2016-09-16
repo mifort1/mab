@@ -1,0 +1,13 @@
+.special-offers-vertical { width:380px; height:173px; }
+#slider .carousel_nav a { top:40% !important; }
+#slider .next, #slider .prev { display: none !important; }
+#slider:hover .next, #slider:hover .prev { display:block !important; }
+#slider li div { bottom:75px !important; background:#000 !important; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
+.container { width:1170px; }
+.span1 { width:70px;}
+.span2 { width:170px;}
+.span3 { width:270px;}
+.span4 { width:370px;}
+.span6 { width:570px;}
+.span7 { width:670px;}
+.span9 { width:870px;}
