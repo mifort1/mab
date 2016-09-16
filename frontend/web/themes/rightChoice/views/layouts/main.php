@@ -20,7 +20,7 @@ AppAsset::register($this);
     <title><?php echo Html::encode($this->title) ?></title>
     <?php echo Html::csrfMetaTags(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="shortcut icon" href="<?php echo $this->theme->basePath;?>/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo $this->theme->baseUrl;?>/assets/img/favicon.ico">
 
 
     <?php $this->registerJsFile('@web/themes/rightChoice/assets/js/modernizr.custom.js', ['position'=>$this::POS_HEAD], 'modernizr');?>
