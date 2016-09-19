@@ -32,8 +32,11 @@ class AppAsset extends AssetBundle
         'css/multizoom.css',
         'css/jquery.modal.css',
     ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        //'yii\bootstrap\BootstrapAsset',
+    ];
     public $js = [
-        'js/main.js',
         'js/jquery.eislideshow.js',
         'js/jquery.easing.js',
         'js/jquery.dlmenu.js',
@@ -49,9 +52,6 @@ class AppAsset extends AssetBundle
         'js/jquery.modal.js',
         'js/jquery.jcountdown.js',
         'js/script.js',
-    ];
-    public $depends = [
-        'yii\web\YiiAsset',
-        //'yii\bootstrap\BootstrapAsset',
+        'js/main.js',
     ];
 }

@@ -37,63 +37,30 @@ AppAsset::register($this);
 
 
 <!--Sign Up Modal-->
-<div class="modal" id="sign-up-modal" style="display:none;">
-    <img src="<?php echo $this->theme->baseUrl;?>/assets/img/sign-up.png">
-    <h3>Get the newsletter</h3>
-    <div class="ruler2"></div>
-    <div class="sign-up-content">
-        <div class="sign-up-photos"></div>
-        <p>Sign up to our Newsletter to get the latest fashion trends for men and women, exclusive campaigns, special discounts, and promotions for you, your friends and family.</p>
-        <form method="post">
-            <input type="text" placeholder="Enter your email address"><br>
-            <label><input type="radio" name="gender" value="female"> female</label><label><input type="radio" name="gender" value="male"> male</label><br>
-            <input type="submit" value="Sign up" class="btn btn-large btn-danger"/>
-        </form>
-        <p>Already a member?<br><a><i class="icon-angle-right"></i> Continue shopping</a></p>
-    </div>
-</div>
+<!--<div class="modal" id="sign-up-modal" style="display:none;">-->
+<!--    <img src="--><?php //echo $this->theme->baseUrl;?><!--/assets/img/sign-up.png">-->
+<!--    <h3>Get the newsletter</h3>-->
+<!--    <div class="ruler2"></div>-->
+<!--    <div class="sign-up-content">-->
+<!--        <div class="sign-up-photos"></div>-->
+<!--        <p>Sign up to our Newsletter to get the latest fashion trends for men and women, exclusive campaigns, special discounts, and promotions for you, your friends and family.</p>-->
+<!--        <form method="post">-->
+<!--            <input type="text" placeholder="Enter your email address"><br>-->
+<!--            <label><input type="radio" name="gender" value="female"> female</label><label><input type="radio" name="gender" value="male"> male</label><br>-->
+<!--            <input type="submit" value="Sign up" class="btn btn-large btn-danger"/>-->
+<!--        </form>-->
+<!--        <p>Already a member?<br><a><i class="icon-angle-right"></i> Continue shopping</a></p>-->
+<!--    </div>-->
+<!--</div>-->
 <!--End of Sign Up Modal-->
 
 <div class="main">
     <!--<div class="main span12 boxed">-->
     <!--HEADER  -->
     <div class="header">
-        <!--HEADER BAR TOP-->
-        <div class="header-bar clearfix">
-            <!--HEADER  OPTHION BAR-->
-            <div class="container">
-                <!--LANGUAGE AND CURRENCY GROUP-->
-                <div class="header-quick-options fl">
-                    <a href="index.html" class="active">en</a>
-                    <a href="index.html">fr</a>
-                    <a href="index.html">gm</a>
-                    <p>&nbsp;
 
-                    </p>
-                    <a href="index.html" class="active">$</a>
-                    <a href="index.html">&euro;</a>
-                </div>
-                <!-- /LANGUAGE AND CURRENCY GROUP-->
-                <!--QUICK CONTACT-->
-                <div class="header-quick-contact fl">
-                    <p>
-                        <i class="icon-phone icon-2x"></i> Call us: +444(000) 123 45 67
-                    </p>
-                </div>
-                <!--/QUICK CONTACT-->
-                <!-- USER SHORTCUTS-->
-                <div class="header-user-shortcuts fr">
-                    <ul>
-                        <li><i class="icon-lock"></i> Welcome, visitor.</li>
-                        <li><i class="icon-user"></i><a href="index.html">My Account</a></li>
-                        <li><i class="icon-heart"></i><a href="index.html">My Wishlist</a></li>
-                    </ul>
-                </div>
-                <!-- /USER SHORTCUTS-->
-            </div>
-            <!--/HEADER  OPTHION BAR-->
-        </div>
-        <!-- /HEADER BAR TOP-->
+        <?= \frontend\widgets\HeaderBar::widget() ?>
+
         <div class="container clearfix">
             <!--HEADER CONTENT-->
             <div class="header-content">
@@ -1332,105 +1299,7 @@ AppAsset::register($this);
 
 <?php $this->endBody(); ?>
 </body>
-<script type="text/javascript">
-    //<![CDATA[
-    jQuery(document).ready(function($){
 
-        // Activate Sign Up Modal Block on Page Load
-        $("#sign-up-modal").modal();
-
-
-        // Daily Deal CountDown Clock Settings
-        var date = new Date().getTime();			// This example is just to show how this function works.
-        var new_date = new Date(date + 86400000);	// You can set your own time whenever you want.
-        var n = new_date.toUTCString();				// 'date' value is given in milliseconds.
-
-        $("#time").countdown({
-            date: new_date,
-            yearsAndMonths: true,
-            leadingZero: true
-        });
-
-
-        // CarouFredSel Functions
-        $('#carouFredSel-big').carouFredSel({
-            responsive:true,
-            height: 'auto',
-            prev: '#prev_big',
-            next: '#next_big',
-            auto: {
-                timeoutDuration: 10000,
-                pauseOnHover: true
-            }
-        })/*.find("li").hover(
-         function() { $(this).find("div").slideDown(); },
-         function() { $(this).find("div").slideUp();}
-         )*/;
-
-        $('#productBestSale').carouFredSel({
-            responsive:true,
-            width: '100%',
-            scroll: {duration:500,items:1},
-            prev: '#prev_productBestSale',
-            next: '#next_productBestSale',
-            auto: false,
-            items: {
-                height: 'auto',
-                //	height: '30%',	//	optionally resize item-height
-                visible: {
-                    min: 1,
-                    max: 6
-                }
-            }
-        });
-        $('#productNew').carouFredSel({
-            responsive:true,
-            width: '100%',
-            scroll: {duration:500,items:1},
-            prev: '#prev_productNew',
-            next: '#next_productNew',
-            auto: false,
-            items: {
-                height: 'auto',
-                //	height: '30%',	//	optionally resize item-height
-                visible: {
-                    min: 1,
-                    max: 6
-                }
-            }
-        });
-        $('#productFeatured').carouFredSel({
-            responsive:true,
-            width: '100%',
-            scroll: {duration:500,items:1},
-            prev: '#prev_productFeatured',
-            next: '#next_productFeatured',
-            auto: false,
-            items: {
-                height: 'auto',
-                //	height: '30%',	//	optionally resize item-height
-                visible: {
-                    min: 1,
-                    max: 6
-                }
-            }
-        });
-        $('#partner').carouFredSel({
-            responsive: true,
-            width: '100%',
-            scroll: 1,
-            items: {
-                height:'100%',
-                //	height: '30%',	//	optionally resize item-height
-                visible: {
-                    min: 1,
-                    max: 6
-                }
-            }
-        });
-    });
-    //]]>
-</script>
 </html>
 
 <?php $this->endPage(); ?>
