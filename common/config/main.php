@@ -26,4 +26,5 @@ return [
         ],
 
     ],
+    'language' => 'ru-RU',
 ];

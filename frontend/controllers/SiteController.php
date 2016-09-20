@@ -18,6 +18,9 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+
+
+    public $defaultAction = 'products';
     /**
      * @inheritdoc
      */
@@ -209,5 +212,9 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+    public function actionProducts()
+    {
+        return $this->render('products');
     }
 }
