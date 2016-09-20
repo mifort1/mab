@@ -2,12 +2,12 @@
     <!--HEADER CONTENT-->
     <div class="header-content">
         <!--LOGO-->
-        <a href="index.html" class="logo"></a>
+        <a href="/" class="logo"></a>
         <!--LOGO TITLE-->
         <div class="header-title">
-            <h1>Right Choice</h1>
+            <h1>Мой магазин</h1>
             <p>
-                e-commerce premium template
+                детская одежда
             </p>
         </div>
         <!--/LOGO TITLE-->
@@ -163,9 +163,9 @@
             <div class="fl">
                 <a href="index.html" class="toggle-items fr">
                     <i class="icon-angle-right icon-2x fr"></i>
-                    <h5>Shopping Cart</h5>
+                    <h5>Корзина</h5>
                     <p>
-                        <span id="items-amount">3</span> item(s)
+                        <span id="items-amount">3</span> предет(а)
                     </p>
                 </a>
             </div>
@@ -213,7 +213,7 @@
         <!--/END OF SHOPING CART-->
         <!--SEARCH BLOCK-->
         <div class="header-search-block fr">
-            <a href="advanced-search.html">Advanced search</a>
+            <a href="advanced-search.html">Расширенный поиск</a>
             <form>
                 <input type="text" name="q" class="fl"/>
                 <input type="submit" value="" class="fl"/>
