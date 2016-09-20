@@ -52,6 +52,6 @@ class AppAsset extends AssetBundle
         'js/jquery.modal.js',
         'js/jquery.jcountdown.js',
         'js/script.js',
-        'js/main.js',
+//        'js/main.js',
     ];
 }
