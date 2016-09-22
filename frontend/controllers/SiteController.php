@@ -19,7 +19,6 @@ use frontend\models\ContactForm;
 class SiteController extends Controller
 {
 
-
     public $defaultAction = 'products';
     /**
      * @inheritdoc
@@ -75,6 +74,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+       // $namejetUrl = 'http://2opt.com.ua/download/1/';
+       // $data = file_get_contents($namejetUrl);
+
+      //  $putContent = file_put_contents(Yii::$app->basePath . "/../downloads/NameJet.xls", $data);
+       // \yii\helpers\VarDumper::dump($a); die;
         return $this->render('index');
     }
 

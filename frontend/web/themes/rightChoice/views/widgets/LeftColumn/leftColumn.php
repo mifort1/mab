@@ -1,6 +1,6 @@
 <!--Start Left Column-->
 <div class="left-column span3 ml-0 fl">
-    <h4 class="block-title">Categories</h4>
+    <h4 class="block-title">Категории</h4>
     <div class="ruler">
     </div>
     <ul class="categories">
