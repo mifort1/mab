@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use Yii;
+use yii\base\Component;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -74,7 +75,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-       // $namejetUrl = 'http://2opt.com.ua/download/1/';
+
+         $a = \common\components\shop\TwoOpt::getFiles(); die;
+        // $namejetUrl = 'http://2opt.com.ua/download/1/';
        // $data = file_get_contents($namejetUrl);
 
       //  $putContent = file_put_contents(Yii::$app->basePath . "/../downloads/NameJet.xls", $data);
