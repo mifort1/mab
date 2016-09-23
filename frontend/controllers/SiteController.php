@@ -76,12 +76,35 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-         $a = \common\components\shop\TwoOpt::getFiles(); die;
-        // $namejetUrl = 'http://2opt.com.ua/download/1/';
-       // $data = file_get_contents($namejetUrl);
+       $fileName = Yii::$app->basePath . "/../downloads/1.xls";
 
-      //  $putContent = file_put_contents(Yii::$app->basePath . "/../downloads/NameJet.xls", $data);
-       // \yii\helpers\VarDumper::dump($a); die;
+        // Открываем файл
+        $xls = \PHPExcel_IOFactory::load($fileName);
+        // Устанавливаем индекс активного листа
+        $xls->setActiveSheetIndex(0);
+// Получаем активный лист
+        $sheet = $xls->getActiveSheet();
+        echo "<table>";
+
+// Получили строки и обойдем их в цикле
+        $rowIterator = $sheet->getRowIterator();
+        foreach ($rowIterator as $row) {
+            // Получили ячейки текущей строки и обойдем их в цикле
+            $cellIterator = $row->getCellIterator();
+
+            echo "<tr>";
+
+            foreach ($cellIterator as $cell) {
+                //  var_dump($cell); die;
+//                echo "<td>" . $cell->getCalculatedValue() . "Color - ".$cell->getStyle()->getFill()->getStartColor()->getRGB()."</td>";
+                echo "<td>" . $cell->getCalculatedValue() . "</td>";
+            }
+
+            echo "</tr>";
+        }
+        echo "</table>";
+       // var_dump($sheet);
+         die;
         return $this->render('index');
     }
 
