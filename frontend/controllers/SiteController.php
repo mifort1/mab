@@ -76,7 +76,11 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-       $fileName = Yii::$app->basePath . "/../downloads/1.xls";
+         $a = \common\components\shop\TwoOpt::getFiles(); die;
+        // $namejetUrl = 'http://2opt.com.ua/download/1/';
+       // $data = file_get_contents($namejetUrl);
+
+        $fileName = Yii::$app->basePath . "/../downloads/1.xls";
 
         // Открываем файл
         $xls = \PHPExcel_IOFactory::load($fileName);

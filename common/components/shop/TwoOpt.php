@@ -19,7 +19,7 @@ class TwoOpt
        // берем страницу с ссылками на xls-файлы
         $arrayXls = [];
         $html = file_get_contents(self::TWOOPTURL);
-        $nokogiri = new Nokogiri();
+        $nokogiri = new \nokogiri();
         $nokogiri->loadHtml($html);
         $a = $nokogiri->get('strong a')->toArray();
         foreach($a as $val){

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7b87242f4888133364e8c4573e3823e",
-    "content-hash": "37732dc3b343145109cb24db8b44ac7d",
+    "hash": "b20df956d1cdf788ed0ba656e9e4772a",
+    "content-hash": "d060030dca3bc348e05a05adcf80cb69",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -298,6 +298,50 @@
                 "html"
             ],
             "time": "2016-07-16 12:58:58"
+        },
+        {
+            "name": "olamedia/nokogiri",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/olamedia/nokogiri.git",
+                "reference": "d9c942a60a2b397eaea3c902a03e45c8010f4e48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/olamedia/nokogiri/zipball/d9c942a60a2b397eaea3c902a03e45c8010f4e48",
+                "reference": "d9c942a60a2b397eaea3c902a03e45c8010f4e48",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "nokogiri.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "olamedia",
+                    "email": "olamedia@gmail.com",
+                    "homepage": "http://github.com/olamedia",
+                    "role": "Developer"
+                }
+            ],
+            "description": "HTML Parser",
+            "homepage": "http://github.com/olamedia/nokogiri",
+            "keywords": [
+                "html",
+                "parse",
+                "parser"
+            ],
+            "time": "2015-05-19 18:39:31"
         },
         {
             "name": "phpoffice/phpexcel",
